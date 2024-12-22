@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Blog Home</h1>
+        <h2>Blog Posts</h2>
+        <ul>
+            {% for blog in blogs %}
+            <li>
+                <h3><a href="{{ url_for('show_blog', id=blog.id) }}">{{ blog.title }}</a></h3>
+                <p>{{ blog.content[:150] }}...</p> <!-- Preview content -->
+                <a href="{{ url_for('show_blog', id=blog.id) }}">Read More</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
