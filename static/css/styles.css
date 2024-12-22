@@ -86,6 +86,7 @@ header h1 {
     background-color: #0056b3;
 }
 
+/* Blog List */
 .blog-list {
     list-style: none;
     padding: 0;
@@ -122,28 +123,20 @@ form {
 form label {
     font-size: 16px;
     margin-bottom: 5px;
+    display: block;
 }
 
 form input, form textarea {
     font-size: 16px;
     padding: 10px;
     width: 100%;
-    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-form button {
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-form button:hover {
-    background-color: #218838;
+form input:focus, form textarea:focus {
+    border-color: #007bff;
 }
 
 /* Footer */
